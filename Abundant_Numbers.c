@@ -1,16 +1,21 @@
 #include<stdio.h>
-int main()
+int div(int n)
 {
-    int n,i,s=0;
-    scanf("%d",&n);
-    for(i=1;i<n;i++)
+    int i,s=1;
+    for(i=2;i<(n);i++)
     {
         if(n%i==0)
         {
-            s=s+i;
+            s+=i;
         }
     }
-    //printf("%d",s);
+    return s;
+}
+int main()
+{
+    int n,m,x,s;
+    scanf("%d",&n);
+    s=div(n);
     if(s>n)
     {
         printf("True");
