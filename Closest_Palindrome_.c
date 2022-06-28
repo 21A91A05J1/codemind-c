@@ -1,0 +1,62 @@
+#include<stdio.h>
+int main()
+{
+    int i,n,s=0,d,t,x,p=0,q=0;
+    scanf("%d",&n);
+    n=n+1;
+    t=n;
+    x=n-2;
+    while(t>0)
+    {
+        p++;
+        s=0;
+        n=t;
+        while(n>0)
+        {
+            d=n%10;
+            n=n/10;
+            s=s*10+d;
+        }
+        if(t==s)
+        {
+            break;
+        }
+        else
+        {
+            t++;
+        }
+    }
+    while(x>0)
+    {
+        q++;
+        s=0;
+        n=x;
+        while(n>0)
+        {
+            d=n%10;
+            n=n/10;
+            s=s*10+d;
+        }
+        if(x==s)
+        {
+            break;
+        }
+        else
+        {
+            x--;
+        }
+    }
+    if(p>q)
+    {
+        printf("%d",x);
+    }
+    if(q>p)
+    {
+        printf("%d",t);
+    }
+    if(p==q)
+    {
+        printf("%d %d",x,t);
+    }
+    
+}
